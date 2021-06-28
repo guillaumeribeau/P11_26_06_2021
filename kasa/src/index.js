@@ -1,12 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route} from 'react-router-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Header from './components/Header';
+
+
+import Apropos from './pages/Apropos/apropos';
+import '../src/styles/index.scss';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Route exact path="/">
+    <Header/>
+
+      </Route>
+      <Route path ="/apropos">
+        <Apropos/>
+      </Route>
+    </Router>
+
+ 
   </React.StrictMode>,
   document.getElementById('root')
 );
