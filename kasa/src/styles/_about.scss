@@ -1,0 +1,31 @@
+.about_content {
+  position: relative;
+  margin-top: 65px;
+  width: 1023px;
+  height: 47px;
+  border-radius: 5px;
+  background-color: $primary-color;
+  margin-left: 100px;
+
+  img {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+  h2 {
+    color: $white-color;
+    font-size: 18px;
+    padding: 10px 0 10px 10px;
+  }
+
+  .about_text {
+    display: none;
+    background-color: $secondary-color;
+    color: $primary-color;
+    padding: 15px;
+    border-radius: 0 5px 5px 0px;
+  }
+  .active_text {
+    display: block;
+  }
+}
