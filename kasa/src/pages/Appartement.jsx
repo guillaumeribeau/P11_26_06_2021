@@ -1,15 +1,15 @@
 import React, { Component } from "react";
-import Header from "../components/Header";
 import Navigation from "../components/Navigation";
-import Tag from "../components/Tags";
+import Tag from "../components/Tag";
 import logo from "../assets/logo.svg";
+import Dropdown from "../components/Dropdown";
+import Profils from "../components/Profils";
 
 class Appartement extends Component {
   constructor(props) {
     super(props);
     this.state = {
       data: {},
-      dataIsLoaded: false,
     };
   }
 
@@ -21,7 +21,6 @@ class Appartement extends Component {
           (property) => property.id === this.props.match.params.id
         );
         this.setState({
-          dataIsLoaded: true,
           data: property[0],
         });
       });
@@ -29,8 +28,9 @@ class Appartement extends Component {
 
   render() {
     const { data } = this.state;
-    
-    
+    const tagsData = this.state.data.tags;
+    const profilData= this.state.data.host;
+
     return (
       <div className="appartement">
         <div>
@@ -42,10 +42,21 @@ class Appartement extends Component {
         <h1>{data.title}</h1>
         <h2>{data.location}</h2>
         <div className="property__tags">
-                                {this.state.data.tags.map((tag, i) => <Tag key={i} name={tag} />)}
-                            </div>
+          {tagsData && tagsData.map((tag, i) => <Tag key={i} name={tag} />)}
+        </div>
+        <Dropdown title="Description" text={data.description} />
+        <Dropdown
+          title="Équipements"
+          text={
+            data.equipments &&
+            data.equipments.map((equipement) => <li>{equipement}</li>)
+          }
+        />
         
-=        </div>
+        <div>{profilData && 
+          <Profils name={profilData.name} avatar={profilData.picture} />}
+           </div>   
+      </div>
     );
   }
 }

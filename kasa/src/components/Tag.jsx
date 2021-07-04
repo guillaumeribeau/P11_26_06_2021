@@ -3,7 +3,7 @@ import React from 'react';
 
 
 
-class Tags extends React.Component {
+class Tag extends React.Component {
     constructor(props) {
         super(props);
 
@@ -18,4 +18,4 @@ class Tags extends React.Component {
     }
 }
 
-export default Tags;
+export default Tag;
