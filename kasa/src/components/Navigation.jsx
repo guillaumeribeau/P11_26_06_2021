@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import logo from "../assets/logo.svg";
 
 class Navigation extends Component {
   render() {
     return (
+      <div className='navigation'>
+      <img className="logo" src={logo} alt="logo de Kasa" />
       <nav className="header_nav">
         <NavLink to ="/" activeClassName="nav-active">
           Accueil
@@ -12,6 +15,7 @@ class Navigation extends Component {
           A Propos
         </NavLink>
       </nav>
+    </div>
     );
   }
 }

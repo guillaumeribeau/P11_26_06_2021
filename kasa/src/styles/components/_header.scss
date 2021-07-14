@@ -1,9 +1,14 @@
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+// header {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+// }
+.navigation{
+display: flex;
+justify-content: space-between;
+align-items: center;
 
+}
 
 .logo {
   height: 68px;
