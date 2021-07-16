@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { faStar } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import starColor from "../../assets/star-color.svg";
+import starEmpty from "../../assets/star-empty.svg";
 
 
 
@@ -8,7 +8,7 @@ class Stars extends Component {
     render() {
         return (
             <div>
-                <FontAwesomeIcon icon={faStar} />
+                <img src={starColor} alt=""/>
                 
             </div>
         );

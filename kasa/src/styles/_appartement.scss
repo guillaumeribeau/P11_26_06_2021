@@ -35,3 +35,28 @@
 
 }
 
+
+.information_container{
+
+display: flex;
+justify-content: space-between;
+
+}
+
+.profils{
+display: flex;
+align-items: center;
+margin-right: 100px;
+
+img{
+width:64px ;
+height: 64px;
+border-radius: 50%;
+}
+
+}
+
+
+.stars{
+    display: flex;
+}

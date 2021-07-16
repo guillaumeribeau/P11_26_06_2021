@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import headerImage from "../assets/sectionBackgroundAccueil.png";
 import Navigation from '../components/Navigation';
 import AllCards from '../components/AllCards';
+import Footer from '../components/Footer';
 
 
 class Home extends Component {
@@ -19,7 +20,7 @@ class Home extends Component {
           </div>
         </div>
                  <AllCards/>
-                
+                <Footer/>
             </div>
         );
     }

@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import Dropdown from "../components/Dropdown";
 import Navigation from "../components/Navigation";
 import headerAbout from "../assets/sectionBackgroundApropos.png";
+import Footer from "../components/Footer";
 
 class About extends React.Component {
   render() {
@@ -37,6 +38,7 @@ class About extends React.Component {
      Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes."
           />
         </div>
+        <Footer/>
       </div>
     );
   }

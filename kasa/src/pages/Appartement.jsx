@@ -1,12 +1,10 @@
 import React, { Component } from "react";
 import Navigation from "../components/Navigation";
 import Tag from "../components/Tag";
-import logo from "../assets/logo.svg";
 import Dropdown from "../components/Dropdown";
 import Profils from "../components/Profils";
 import Gallery from "../components/Gallery";
-import Image from "../components/Image";
-import Stars from "../components/Rate/Stars";
+import Footer from "../components/Footer";
 
 class Appartement extends Component {
   constructor(props) {
@@ -34,7 +32,6 @@ class Appartement extends Component {
     const tagsData = this.state.data.tags;
     const profilData = this.state.data.host;
     const pictureData = this.state.data.pictures;
-    
 
     return (
       <div className="appartement">
@@ -42,31 +39,33 @@ class Appartement extends Component {
           <Navigation />
         </div>
 
-        <Gallery images= {pictureData}/>
- 
-                   
-    
-        <h1>{data.title}</h1>
-        <h2>{data.location}</h2>
-        <div className="property__tags">
-          {tagsData && tagsData.map((tag, i) => <Tag key={i} name={tag} />)}
+        <Gallery images={pictureData} />
+
+        <div className="information_container">
+          <div className="information_title">
+            <h1>{data.title}</h1>
+            <h2>{data.location}</h2>
+            <div className="property__tags">
+              {tagsData && tagsData.map((tag, i) => <Tag key={i} name={tag} />)}
+            </div>
+          </div>
+          <div>
+            {profilData && (
+              <Profils name={profilData.name} avatar={profilData.picture} />
+            )}
+          </div>
         </div>
         <div className="about_container">
-        <Dropdown title="Description" text={data.description} />
-        <Dropdown
-          title="Équipements"
-          text={
-            data.equipments &&
-            data.equipments.map((equipement) => <li>{equipement}</li>)
-          }
-        />
-      </div>
-        <div>
-          {profilData && (
-            <Profils name={profilData.name} avatar={profilData.picture} />
-          )}
+          <Dropdown title="Description" text={data.description} />
+          <Dropdown
+            title="Équipements"
+            text={
+              data.equipments &&
+              data.equipments.map((equipement) => <li>{equipement}</li>)
+            }
+          />
         </div>
-        <Stars/>
+        <Footer/>
       </div>
     );
   }
