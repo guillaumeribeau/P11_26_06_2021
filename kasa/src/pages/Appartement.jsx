@@ -4,6 +4,9 @@ import Tag from "../components/Tag";
 import logo from "../assets/logo.svg";
 import Dropdown from "../components/Dropdown";
 import Profils from "../components/Profils";
+import Gallery from "../components/Gallery";
+import Image from "../components/Image";
+import Stars from "../components/Rate/Stars";
 
 class Appartement extends Component {
   constructor(props) {
@@ -29,21 +32,26 @@ class Appartement extends Component {
   render() {
     const { data } = this.state;
     const tagsData = this.state.data.tags;
-    const profilData= this.state.data.host;
+    const profilData = this.state.data.host;
+    const pictureData = this.state.data.pictures;
+    
 
     return (
       <div className="appartement">
         <div>
-          <header>
-            <img className="logo" src={logo} alt="logo de Kasa" />
-            <Navigation />
-          </header>
+          <Navigation />
         </div>
+
+        <Gallery images= {pictureData}/>
+ 
+                   
+    
         <h1>{data.title}</h1>
         <h2>{data.location}</h2>
         <div className="property__tags">
           {tagsData && tagsData.map((tag, i) => <Tag key={i} name={tag} />)}
         </div>
+        <div className="about_container">
         <Dropdown title="Description" text={data.description} />
         <Dropdown
           title="Équipements"
@@ -52,10 +60,13 @@ class Appartement extends Component {
             data.equipments.map((equipement) => <li>{equipement}</li>)
           }
         />
-        
-        <div>{profilData && 
-          <Profils name={profilData.name} avatar={profilData.picture} />}
-           </div>   
+      </div>
+        <div>
+          {profilData && (
+            <Profils name={profilData.name} avatar={profilData.picture} />
+          )}
+        </div>
+        <Stars/>
       </div>
     );
   }

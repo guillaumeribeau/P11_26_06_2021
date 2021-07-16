@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import HomeHousing from '../components/AllCards';
 import headerImage from "../assets/sectionBackgroundAccueil.png";
 import Navigation from '../components/Navigation';
+import AllCards from '../components/AllCards';
 
 
 class Home extends Component {
@@ -18,7 +18,7 @@ class Home extends Component {
             Chez vous, partout et ailleurs{" "}
           </div>
         </div>
-                 <HomeHousing/>
+                 <AllCards/>
                 
             </div>
         );

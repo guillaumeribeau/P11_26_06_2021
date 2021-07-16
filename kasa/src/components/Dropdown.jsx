@@ -17,7 +17,7 @@ class Dropdown extends Component {
   render() {
     return (
       <div className="about_content">
-        <h2>{this.props.title}</h2>
+        <h3>{this.props.title}</h3>
         <img onClick={this.show} src="/img/chevron_bas.svg" alt="" />
         <div
           className={
