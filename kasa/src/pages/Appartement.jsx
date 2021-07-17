@@ -5,6 +5,7 @@ import Dropdown from "../components/Dropdown";
 import Profils from "../components/Profils";
 import Gallery from "../components/Gallery";
 import Footer from "../components/Footer";
+import Rate from "../components/Rate/Rate";
 
 class Appartement extends Component {
   constructor(props) {
@@ -32,6 +33,7 @@ class Appartement extends Component {
     const tagsData = this.state.data.tags;
     const profilData = this.state.data.host;
     const pictureData = this.state.data.pictures;
+    const starsData = this.state.data.rating;
 
     return (
       <div className="appartement">
@@ -53,9 +55,12 @@ class Appartement extends Component {
             {profilData && (
               <Profils name={profilData.name} avatar={profilData.picture} />
             )}
+            <div className="stars">
+              <Rate number={starsData && starsData} />
+            </div>
           </div>
         </div>
-        <div className="about_container">
+        <div className="description_container">
           <Dropdown title="Description" text={data.description} />
           <Dropdown
             title="Équipements"
@@ -65,7 +70,7 @@ class Appartement extends Component {
             }
           />
         </div>
-        <Footer/>
+        <Footer />
       </div>
     );
   }

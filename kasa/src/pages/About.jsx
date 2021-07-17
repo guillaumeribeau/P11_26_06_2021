@@ -15,9 +15,6 @@ class About extends React.Component {
             <div>
               <img src={headerAbout} alt="paysage de montagne" />
             </div>
-            <div className="text_image_header">
-              Chez vous, partout et ailleurs{" "}
-            </div>
           </div>
           <Dropdown
             title="Fiabilité"
@@ -38,7 +35,7 @@ class About extends React.Component {
      Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes."
           />
         </div>
-        <Footer/>
+        <Footer />
       </div>
     );
   }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Stars from './Rate/Stars';
+import Stars from './Rate/Stars1';
 
 class Profils extends Component {
     render() {
@@ -10,10 +10,7 @@ class Profils extends Component {
                 <img src={this.props.avatar} alt="avatar"/>
                
             </div>
-             <div className="stars">
-             <Stars />
-             <Stars />
-             </div>
+            
              </>
         );
     }

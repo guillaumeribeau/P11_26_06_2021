@@ -15,16 +15,21 @@ class Dropdown extends Component {
   };
 
   render() {
+    const visible= this.state.visible
     return (
       <div className="about_content">
         <h3>{this.props.title}</h3>
-        <img onClick={this.show} src="/img/chevron_bas.svg" alt="" />
-        <div
-          className={
+        {!visible ?
+        <img onClick={this.show} src="/img/chevron_bas.svg" alt="" /> : 
+        <img onClick={this.show} src="/img/chevron_haut.svg" alt="" />
+        }
+        <div>
+          <p className={
             this.state.visible ? "about_text active_text" : "about_text"
           }
-        >
-          {this.props.text}
+       >
+          {this.props.text} 
+          </p>
         </div>
       </div>
     );
