@@ -11,7 +11,7 @@ class NotFound extends Component {
                 <Navigation/>
                 <h1>404</h1>
                 <h2>Oups! La page que vous emandez n'existe pas.</h2>
-                <NavLink to='/'>Retourner sur la page d'accueil</NavLink>
+                <NavLink className='return_home' to='/'>Retourner sur la page d'accueil</NavLink>
                 <Footer/>
             </div>
            
