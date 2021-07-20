@@ -51,7 +51,7 @@ class Appartement extends Component {
               {tagsData && tagsData.map((tag, i) => <Tag key={i} name={tag} />)}
             </div>
           </div>
-          <div>
+          <div className='profils_data'>
             {profilData && (
               <Profils name={profilData.name} avatar={profilData.picture} />
             )}

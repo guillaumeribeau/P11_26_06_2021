@@ -39,6 +39,13 @@
   justify-content: space-between;
 }
 
+.profils_data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 .profils {
   display: flex;
   align-items: center;
@@ -53,18 +60,14 @@
 }
 
 .profils_name {
-
   margin-right: 10px;
   font-family: Montserrat;
-font-size: 18px;
-font-style: normal;
-font-weight: 500;
-line-height: 26px;
-letter-spacing: 0em;
-text-align: right;
-
-
-
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: right;
 }
 
 .stars {
@@ -82,7 +85,18 @@ text-align: right;
 
 
 
+
+
+
+
 @media screen and (max-width: 850px) {
+ 
+
+  .information_container {
+    display: block;
+    
+  }
+ 
   .appartement {
     color: $primary-color;
     h1 {
@@ -103,36 +117,38 @@ text-align: right;
     height: 18px;
   }
   .stars {
-  
-    display: flex;
+ //
+    position: absolute;
+    top: 520px;
+    left: 20px;
+
     img {
       width: 15px;
     }
   }
-.profils_name{
 
-  font-size: 12px;
-  
-}
   .profils {
-    display: flex;
-    align-items: center;
-    margin-right: 100px;
-    margin-bottom: 20px;
-
-  img {
+    position: absolute;
+    display: block;
     
+    right: 0;
+    margin-right: 0;
+    font-size: 12px;
+    img {
       width: 32px;
       height: 32px;
       border-radius: 50%;
     }
+    .profils_name {
+      font-size: 12px;
+      top: 512px;
+    }
   }
 
-.description_container{
-display: block;
-margin-left: 20px;
-margin-right: 20px;
 
+.description_container {
+  display: block;
+  margin-left: 20px;
+  margin-right: 20px;
 }
-
 }

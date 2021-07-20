@@ -7,7 +7,7 @@ class Gallery extends Component {
     currentPicture: 0,
   };
 
-  goToPreviousImage = () => {
+  goToNextImage = () => {
     this.setState((prevState) => ({
       currentPicture:
         prevState.currentPicture === 0
@@ -16,7 +16,7 @@ class Gallery extends Component {
     }));
   };
 
-  goToNextImage = () => {
+  goToPreviousImage= () => {
     this.setState((prevState) => ({
       currentPicture:
         prevState.currentPicture === this.props.images.length - 1
@@ -44,6 +44,10 @@ class Gallery extends Component {
             <img className='right' src={rightArrow} alt="arrow-right" />
           </div>
         )}
+        <div className="numberThumbs">
+          {currentPicture+1}/{images && images.length}
+        </div>
+
       </div>
     );
   }
