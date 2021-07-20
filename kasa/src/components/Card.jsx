@@ -9,9 +9,11 @@ class Card extends Component {
   render() {
     return (
       <div className="home_card">
+        <div className='container_image'>
         <img src={this.props.cover} alt="" />
 
-        <div className="home_card_title">{this.props.title}</div>
+        <span className="home_card_title">{this.props.title}</span>
+        </div>
       </div>
     );
   }

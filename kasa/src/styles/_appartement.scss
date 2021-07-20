@@ -80,7 +80,7 @@
 .description_container {
   display: flex;
   justify-content: space-between;
-  margin: 30px 100px 0px 100px;
+  margin: 30px 30px 0px 100px;
 }
 
 
@@ -89,7 +89,7 @@
 
 
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 768px) {
  
 
   .information_container {
@@ -117,9 +117,9 @@
     height: 18px;
   }
   .stars {
- //
+ 
     position: absolute;
-    top: 520px;
+    top: 512px;
     left: 20px;
 
     img {
@@ -128,10 +128,9 @@
   }
 
   .profils {
-    position: absolute;
-    display: block;
-    
-    right: 0;
+   position: absolute;
+         top: 504px;
+    right: 20px;
     margin-right: 0;
     font-size: 12px;
     img {
@@ -140,8 +139,9 @@
       border-radius: 50%;
     }
     .profils_name {
+     
       font-size: 12px;
-      top: 512px;
+ 
     }
   }
 
