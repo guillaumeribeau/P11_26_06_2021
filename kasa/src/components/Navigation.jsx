@@ -8,10 +8,10 @@ class Navigation extends Component {
       <div className='navigation'>
       <img className="logo" src={logo} alt="logo de Kasa" />
       <nav className="header_nav">
-        <NavLink to ="/" activeClassName="nav-active">
+        <NavLink to ="/"  exact activeClassName="nav-active">
           Accueil
         </NavLink>
-        <NavLink to ="/a-propos" activeClassName="nav-active">
+        <NavLink to ="/a-propos" exact activeClassName="nav-active">
           A Propos
         </NavLink>
       </nav>

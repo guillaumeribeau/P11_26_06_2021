@@ -1,31 +1,24 @@
-$primary-color: #FF6060; // rouge
-$secondary-color:#F6F6F6; // gris clair
+$primary-color: #ff6060; // rouge
+$secondary-color: #f6f6f6; // gris clair
 $black-color: #000000;
-$white-color:#FFFFFF;
+$white-color: #ffffff;
 
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
 
-    
-  }
-  
-  a {
-    text-decoration: none;
-  }
+a {
+  text-decoration: none;
+}
 
-
-
-
-
-  body{
-    height: 100vh;
-    display: flex;  
-    flex-direction: column;
-  }
-  #root{
-
-    flex: 1 0 auto ;
-  }
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+#root {
+  flex: 1 0 auto;
+}
