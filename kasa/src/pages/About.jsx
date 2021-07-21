@@ -11,7 +11,7 @@ class About extends React.Component {
       <div>
         <div>
           <Navigation />
-          <div className="container_header_image">
+          <div className="container_about_image">
             <div>
               <img src={headerAbout} alt="paysage de montagne" />
             </div>
