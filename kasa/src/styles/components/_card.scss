@@ -8,14 +8,12 @@
 }
 
 .home_card {
- 
   display: flex;
   justify-content: center;
   align-items: flex-end;
 
-
   img {
-     object-fit: cover;
+    object-fit: cover;
     width: 340px;
     height: 340px;
     margin: 20px;
@@ -27,13 +25,12 @@
   }
 }
 
-.container_image{
-
+.container_image {
   position: relative;
 }
 .home_card_title {
   position: absolute;
-  left:35px;
+  left: 35px;
   bottom: 40px;
   color: $white-color;
 }
@@ -43,31 +40,32 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    margin-left:0;
+    margin-left: 0;
     margin-right: 0;
     border-radius: 25px;
   }
 }
 
 @media screen and (max-width: 768px) {
+
   .container_card {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-   margin-right: 0;
-   margin-left: 0;
+    margin-right: 0;
+    margin-left: 0;
     background-color: transparent;
-    margin-top:20px;
+    margin-top: 20px;
   }
 
-  .home_card {
+.home_card {
     position: relative;
 
     img {
-      width: 100%;
+      width: 98%;
       height: 255px;
-      margin-right:20px;
-      margin-left:20px;
+      margin-right: 20px;
+      margin-left: 20px;
     }
   }
 }
