@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import {createBrowserHistory } from 'history';
 import {
   BrowserRouter,
   BrowserRouter as Router,
